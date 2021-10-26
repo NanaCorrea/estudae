@@ -20,11 +20,16 @@ header {
 
 .logo {
   align-items: center;
-  display: flex;
 }
 
 .logo img {
   width: 2rem;
+}
+
+.logo a {
+  text-decoration: none;
+  color: black;
+  display: flex;
 }
 
 nav img {
@@ -97,9 +102,36 @@ nav:hover .menu {
 
 footer {
   background-color: rgb(248, 244, 239);
-  position: absolute;
+  position: sticky;
   bottom: 0;
   text-align: center;
   font-weight: bold;
   padding: 2vh 5vw;
+}
+
+main {
+  text-align: center;
+}
+
+iframe {
+  margin-top: 5vh;
+}
+
+h3 {
+  margin-top: 1vh;
+}
+
+.titulo {
+  margin-top: 3vh;
+  color: #006b84;
+}
+
+.imagem {
+  width: 60vw;
+  margin-top: 3vh;
+}
+
+main a {
+  text-decoration: none;
+  color: black;
 }
