@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>educae</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="lib/owlcarousel/dist/assets/owl.carousel.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="lib/owlcarousel/dist/assets/owl.theme.default.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <img src="./images/@.gif" alt="Logo educae" />
+        <h1>educae</h1>
+      </div>
+      <nav>
+        <img src="./images/menu.png" alt="Menu" />
+        <div class="menu">
+          <ul>
+            <li><a href="#">Microsoft Office</a></li>
+            <li><a href="#">Linux</a></li>
+            <li><a href="#">CMSP / CAED</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <div class="banner">
+        <h2>Educação</h2>
+        <h2>&</h2>
+        <h2>Tecnologia</h2>
+      </div>
+      <div class="ContainerCarrossel">
+        <div class="owl-carousel owl-theme carrossel">
+          <a href="word.html" class="item"><img src="./images/word.png" /></a>
+          <a href="excel.html" class="item"><img src="./images/excel.png" /></a>
+          <a href="ppt.html" class="item"><img src="./images/ppt.png" /></a>
+          <a href="sed.html" class="item"><img src="./images/sed.png" /></a>
+          <a href="caed.html" class="item"><img src="./images/caed.png" /></a>
+          <a href="cmsp.html" class="item"><img src="./images/cmsp.png" /></a>
+        </div>
+      </div>
+      <!-- Owl Carousel JS -->
+      <script src="lib/jquery.min.js"></script>
+      <script src="lib/owlcarousel/dist/owl.carousel.min.js"></script>
+
+      <!-- Chamar e configurar Owl Carousel -->
+      <script>
+        $(document).ready(function () {
+          $('.owl-carousel').owlCarousel({
+            items: 6,
+            loop: true,
+            margin: 20,
+            nav: true,
+            navText: ['Anterior', 'Próximo'],
+            autoplay: true,
+            autoplayTimeout: 3000,
+            responsive: {
+              0: {
+                items: 1
+              },
+              380: {
+                items: 2
+              },
+              560: {
+                items: 4
+              },
+              780: {
+                items: 5
+              },
+              1000: {
+                items: 6
+              }
+            }
+          })
+        })
+      </script>
+    </main>
+    <footer></footer>
+  </body>
+</html>
