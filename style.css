@@ -78,6 +78,7 @@ nav:hover .menu {
 }
 
 .ContainerCarrossel {
+  margin-top: 3vh;
   padding: 2%;
   margin-bottom: 2%;
   color: white;
@@ -92,4 +93,13 @@ nav:hover .menu {
 
 .owl-carousel img {
   width: 100px;
+}
+
+footer {
+  background-color: rgb(248, 244, 239);
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+  font-weight: bold;
+  padding: 2vh 5vw;
 }
