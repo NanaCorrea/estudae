@@ -135,3 +135,13 @@ main a {
   text-decoration: none;
   color: black;
 }
+
+.texto {
+  padding: 0 5vw;
+  text-align: justify;
+}
+
+.texto h3 {
+  text-align: center;
+  padding: 3vh 0;
+}

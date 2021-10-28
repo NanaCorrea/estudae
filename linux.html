@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>estudae</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <a href="index.html">
+          <img src="./images/@.gif" alt="Logo educae" />
+          <h1>estudae</h1></a
+        >
+      </div>
+      <nav>
+        <img src="./images/menu.png" alt="Menu" />
+        <div class="menu">
+          <ul>
+            <li><a href="office.html">Microsoft Office</a></li>
+            <li><a href="linux.html">Linux</a></li>
+            <li><a href="seducsp.html">CMSP / CAED</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <div class="banner">
+        <h2>Educação</h2>
+        <h2>&</h2>
+        <h2>Tecnologia</h2>
+      </div>
+      <div class="texto">
+        <h2 class="titulo">Programando eh Shell Script no Debian</h2>
+        <h3>Variáveis</h3>
+        <p>
+          As variáveis guardam informações sobre o sistema e sobre as
+          preferências do usuário. Elas podem ser divididas em duas categorias:
+          Variáveis de Ambiente São conhecidas como variáveis globais porque
+          podem ser lidas por todos os processos que o shell iniciar. Por
+          convenção, elas são declaradas em caixa alta. O bash mantém algumas
+          variáveis ambientais importantes:  PATH: Seu conteúdo mantém uma
+          lista de diretórios que o shell procura pelos executáveis chamados na
+          linha de comando.  HOME: Especifica o diretório HOME do usuário
+          corrente.  USER: Especifica o login do usuário corrente.  TERM:
+          Declara o tipo de terminal utilizado.
+        </p>
+        <h3>Variáveis de Shell</h3>
+
+        <p>
+          São também chamadas de variáveis locais, pois são válidas somente no
+          shell em execução. Os processos que executam a partir do shell não tem
+          acesso a elas. Elas são por convenção declaradas em caixa baixa. Como
+          o shell não faz distinção entre as variáveis declaradas em caixa alta
+          ou baixa, todas as variáveis são consideradas variáveis de shell até
+          que sejam exportadas com o comando export. Aliases Outra facilidade
+          importante do shell é a possibilidade de se criar apelidos ou atalhos
+          para os comandos. Ele pode ser utilizado para simplificar comandos com
+          muitas opções ou executar diversos processos em sequência. Funções O
+          bash possibilita definir funções do usuário. Uma função pode chamar
+          uma série de comandos de forma mais complexa que o alias. As funções
+          tem a seguinte sintaxe: # [ function ] NOME () { COMANDOS; } A palavra
+          reservada function é opcional. O NOME é como a nova função será
+          chamada. Os comandos devem estar compreendidos entre chaves.
+        </p>
+        <h3>Arquivos de Configuração do Bash</h3>
+        <p>
+          O bash possibilita que as funções, variáveis e apelidos possam ser
+          gravados em alguns arquivos para que possam ser carregadas novamente
+          quando o sistema for iniciado, ou quando uma nova execução do bash for
+          feita. Alguns arquivos lidos pelo bash: /etc/profile Arquivo global de
+          configuração de variáveis executado durante o processo de
+          autenticação. /etc/bashrc Arquivo global de configuração de variáveis
+          executado toda vez que o bash é carregado. ~/.bash_logout É executado
+          durante o processo de logout Alterando e Escrevendo Scripts de Shell
+          Para criar scripts é preciso enxergar o sitema como uma coleção de
+          ferramentas que podem interagir entre si para formar pequenos
+          programas que irão auxiliar o dia-a-dia de trabalho e manutenção do
+          sitema. Estes pequenos programas são escritos em texto puro em um
+          editor de textos comum e não precisam ser compilados. O shell é capaz
+          de ler este programa como uma lista de comandos. Existem diversas
+          linguagens de programação que interpretam os comandos de um arquivo
+          texto. Desta forma, a primeira linha de um script deve indicar qual
+          será o interpretador utilizado para executar os comandos
+        </p>
+
+        <h3>Permissões de execução</h3>
+
+        <p>
+          Os scripts são executados sob as permissões do usuário que os carrega.
+          Mas existem algumas situações especiais onde pode ser necessário
+          executar ações em nome de outro usuário. Para elas é necessário
+          alterar os bits SUID SGID de um processo. Se estes bits estiverem
+          habilitados, o processo será executado com as permissões do usuário
+          que é o seu dono.
+        </p>
+
+        <h3>Variáveis Especiais</h3>
+        <p>
+          Uma característica importante dos scripts de shell é a possibilidade
+          de configuração da execução com sucesso de um determinado comando. Ela
+          é chamada de variável de retorno. A variável de retorno é preenchida
+          toda vez que um comando é executado. Se o valor retornado for 0, o
+          comando foi executado com sucesso. Se o valor for diferente de 0,
+          algum problema foi encontrado. Se for utilizada em scripts, o seu
+          valor precisa ser verificado imediatamente após a execução do comando
+          desejado.
+        </p>
+        <h3>O comando test</h3>
+
+        <p>
+          O comando test é uma grande ferramenta para testar arquivos,
+          permissões, textos, números, etc. Ele pode testar diversas condições
+          através de expressões. Ele fornece o resultado do teste através da
+          variável de retorno.
+        </p>
+
+        <h3>Referências dos Comandos Bash para Programação Shell</h3>
+        <p>
+          O shell possui estruturas para testar condições e executar
+          determinadas sequências de programas várias vezes (loop). Controle de
+          fluxo são comandos que testam algumas alternativas, e de acordo com o
+          resultado executam comandos. A lógica do comando if é “se isso for
+          verdadeiro, faça isso, se não, faça aquilo”
+        </p>
+
+        <h3>A Condicional case</h3>
+
+        <p>
+          O comando case é também utilizado para controle de fluxo, mas permite
+          que uma série de valores e expressões regulares seja testada e os
+          respectivos comandos sejam executados
+        </p>
+
+        <h3>Uso de Loops utilizando o for</h3>
+        <p>
+          O comando for permite que laços sejam feitos para que um ou mais
+          comandos sejam executados até que uma determinada variável percorra
+          todos os valores de uma dada lista
+        </p>
+
+        <h3>Uso de Loops Utilizando o While</h3>
+        <p>
+          O while testa continuamente uma expressão, até que ela se torne falsa.
+        </p>
+      </div>
+    </main>
+    <footer>
+      <p>
+        Copyright© 2021 by Mariana Correa, Abraão da Silva e Valdemir Santos
+      </p>
+      <p>
+        Como atividade obrigatória da disciplina de Atividade Extensionista -
+        Tecnologia Aplicada à Inclusão Digital nos cursos de Análise e
+        Desenvolvimeto de Sistemas e Engenharia da Computação do Centro
+        Universitário Uninter.
+      </p>
+    </footer>
+  </body>
+</html>
